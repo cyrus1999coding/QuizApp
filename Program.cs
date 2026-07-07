@@ -13,19 +13,19 @@ int score = 0;
 
 Console.WriteLine(question1);
 string userAnswer1 = Console.ReadLine();
-if (userAnswer1 == answer1)
+if (userAnswer1.Trim().ToLower() == answer1.ToLower())
 {
     Console.WriteLine("Correct");
     score++;
 }
 else
 {
-    Console.WriteLine("Wrong, the correct anser is: " + answer1);
+    Console.WriteLine("Wrong, the correct ansser is: " + answer1);
 }
 
 Console.WriteLine(question2);
 string userAnswer2 = Console.ReadLine();
-if (userAnswer2 == answer2)
+if (userAnswer2.Trim().ToLower() == answer2.ToLower())
 {
     Console.WriteLine("Correct");
     score++;
@@ -36,7 +36,7 @@ else
 }
 Console.WriteLine(question3);
 string userAnswer3 = Console.ReadLine();
-if (userAnswer3 == answer3)
+if (userAnswer3.Trim().ToLower() == answer3.ToLower())
 {
     Console.WriteLine("Correct");
     score++;
