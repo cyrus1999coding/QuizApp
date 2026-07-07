@@ -1,20 +1,30 @@
-﻿Console.Write("Give me a number ");
-string inputString = Console.ReadLine();
+﻿Random random = new Random();
 
-int num1;
+int randomNumber = random.Next(1, 11);
 
-bool isNumber = int.TryParse(inputString, out num1);
+Console.WriteLine("Guess the number !");
+
+int num1 = 0;
+
+string userInput = Console.ReadLine();
+
+bool isNumber = int.TryParse(userInput, out num1);
 
 if (isNumber)
 {
-    Console.WriteLine("Well done you entered a number");
+    if (num1 == randomNumber)
+    {
+        Console.WriteLine("You guesses right congratulations");
+    }
+    else
+    {
+        Console.WriteLine("You guess wrong try again ");
+    }
 }
 else
 {
-    Console.WriteLine("HAHA you trolled you should've entered a numbe");
-}
+    Console.WriteLine("Heh yu trolled, You should've entered a number");
 
-num1++;
-Console.WriteLine("User entered number +1 " + num1);
+}
 
 Console.ReadKey();
